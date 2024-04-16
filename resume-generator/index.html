@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+  /* CSS styles */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #ff7f50, #ffcc66);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    width: 400px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: fadeInUp 0.5s ease;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .title {
+    background: #ff6348;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    margin: 0;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .steps .step {
+    margin-bottom: 20px;
+  }
+
+  .step span {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .promo input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    transition: border-color 0.3s ease;
+  }
+
+  .promo input[type="text"]:focus {
+    border-color: #ff6348;
+  }
+
+  .promo button {
+    padding: 10px 20px;
+    background-color: #ff6348;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .promo button:hover {
+    background-color: #ff4500;
+  }
+
+  .payments .details span {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .footer {
+    background: #ff6348;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .price {
+    font-size: 24px;
+  }
+
+  .checkout-btn {
+    padding: 10px 20px;
+    background-color: #ff6348;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .checkout-btn:hover {
+    background-color: #ff4500;
+  }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">Checkout</h2>
+        <div class="card">
+          <div class="steps">
+            <div class="step">
+              <div>
+                <span>SHIPPING</span>
+                <p>123, MG Road</p>
+                <p>New Delhi, India</p>
+              </div>
+              <hr>
+              <div>
+                <span>PAYMENT METHOD</span>
+                <p><i class="fas fa-credit-card" style="color: rgb(230, 156, 132);"></i> <span style="font-size: 12px;">Visa</span></p>
+                <p>**** **** **** 4243</p>
+              </div>
+              <hr>
+              <div class="promo">
+                <span>HAVE A PROMO CODE?</span>
+                <form class="form">
+                  <input type="text" placeholder="Enter a Promo Code" class="input_field">
+                  <button><i class="fas fa-check"></i> Apply</button>
+                </form>
+              </div>
+              <hr>
+              <div class="payments">
+                <span>PAYMENT</span>
+                <div class="details">
+                  <span>Subtotal:</span>
+                  <span>$240.00</span>
+                  <span>Shipping:</span>
+                  <span>$10.00</span>
+                  <span>Tax:</span>
+                  <span>$30.40</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card checkout">
+          <div class="footer">
+            <label class="price">$280.40</label>
+            <button class="checkout-btn">Proceed to Checkout</button>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

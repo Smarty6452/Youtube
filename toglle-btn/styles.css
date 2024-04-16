@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #ff704d, #4d94ff); /* Dragon Ball Z themed gradient background */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    height: 300px;
+    width: 450px;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 0 10px 20px #dbdbdb;
+    font-family: sans-serif;
+    margin-bottom: 20px; /* Add some margin between cards */
+    position: relative; /* Add position relative */
+  }
+  
+  .palette {
+    display: flex;
+    height: 86%;
+    width: 100%;
+  }
+  
+  .color {
+    height: 100%;
+    
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease; /* Add transform transition */
+    position: relative; /* Add position relative */
+    overflow: hidden; /* Hide overflow for children */
+  }
+  
+  .color::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.5), transparent); /* Add fire effect */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+  
+  .color:hover::before {
+    opacity: 1;
+  }
+  .color {
+    opacity: 0.7;
+    border-left: 1px solid rgba(238, 235, 235, 0.91);
+    cursor: pointer;
+  }
+  
+  .color span {
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Slow down the transition */
+  }
+  
+  .color:nth-child(1) {
+    background: url('https://dragonball.guru/wp-content/uploads/2021/04/Hit-Profile-Pic-415x415.png') center/cover; /* Add Dragon Ball Z image */
+  }
+  
+  .color:nth-child(2) {
+    background: url('https://dragonball.guru/wp-content/uploads/2021/03/Android-17-Profile-Pic-300x300.png') center/cover; /* Add Dragon Ball Z image */
+  }
+  
+  .color:nth-child(3) {
+    background: url('https://dragonball.guru/wp-content/uploads/2021/03/vegeta-profile-400x400.png') center/cover; /* Add Dragon Ball Z image */
+  }
+  
+  .color:nth-child(4) {
+    
+    background: url('https://dragonball.guru/wp-content/uploads/2021/03/Piccolo-Profile-Pic-415x415.png') center/cover; /* Add Dragon Ball Z image */
+  }
+  
+  .color:nth-child(5) {
+    background: url('https://dragonball.guru/wp-content/uploads/2021/03/toppng.com-mystic-gohan-dragon-ball-z-gohan-1021x2859-1-e1617011806816-400x400.png') center/cover; /* Add Dragon Ball Z image */
+  }
+  
+  .container .color:hover {
+    transform: scale(1.1); /* Increase scale on hover */
+  }
+  
+  .container .color:hover span {
+    opacity: 1;
+  }
+  
+  #stats {
+    height: 14%;
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5em;
+    box-sizing: border-box;
+    color: #bebebe;
+    transition: transform 0.3s ease; /* Add transition */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  #stats svg {
+    fill: #bebebe;
+    transform: scale(1.2);
+  }
+  
+  .container:hover #stats {
+    transform: translateY(-5px); /* Popup effect on hover */
+  }
+  
+  .icons > :nth-child(2) {
+    opacity: 0.4;
+  }
+  
+  /* Border text design animation */
+  .color .title {
+    animation: borderAnimation 1s infinite alternate;
+  }
+  
+  @keyframes borderAnimation {
+    from {
+      text-shadow: 0 0 3px red, 0 0 5px red, 0 0 7px red, 0 0 10px red, 0 0 15px red, 0 0 20px red, 0 0 30px red;
+    }
+    to {
+      text-shadow: 0 0 2px yellow, 0 0 4px yellow, 0 0 6px yellow, 0 0 8px yellow, 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+    }
+  }

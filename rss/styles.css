@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .feed-list, .feed-details {
+    flex: 1;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  ul li:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .feed-details {
+    margin-left: 20px;
+  }
+  
+  .feed-details h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .feed-details p {
+    color: #666;
+  }
+  
+  /* Add more styles, animations, and transitions as needed */
+  

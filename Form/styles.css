@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 2px,transparent 2px, transparent 4px),linear-gradient(90deg, rgb(15, 29, 142),rgb(179, 185, 189));
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 40px; /* increased padding for larger button */
+    color: white;
+    text-shadow: 2px 2px rgb(116, 116, 116);
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none; /* removed black border */
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 20px; /* slightly increased font size */
+    background-color: hsl(191, 30%, 41%);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    background-image: linear-gradient(to right, #737cd2, #d6daff); /* added gradient background */
+  }
+  
+  button:active {
+    transform: scale(0.95); /* slight scale down on active */
+    transition: all 100ms ease;
+  }
+  
+  button img {
+    transition: all 0.7s ease;
+    z-index: 2;
+  }
+  
+  button:hover img {
+    transform: scale(1.1) translateX(170%);
+ 
+   
+  }
+  
+  .now {
+    position: absolute;
+    left: 0;
+    transform: translateX(-150%);
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+  
+  .play {
+    transition: all 0.5s ease;
+    transition-delay: 300ms;
+  }
+  
+  button:hover .now {
+    transform: translateX(40px);
+    transition-delay: 400ms;
+  }
+  
+  button:hover .play {
+    transform: translateX(200%);
+    transition-delay: 200ms;
+  }
+  
+  /* Fire glow effect on hover */
+  button:hover {
+    box-shadow: 0 0 5px 5px #c2efdf;
+  }
+  

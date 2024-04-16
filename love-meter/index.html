@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love-O-Meter</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body
+    class="bg-gradient-to-r from-pink-400 to-purple-500 min-h-screen flex items-center justify-center"
+  >
+    <div class="container mx-auto p-8 bg-white rounded-lg shadow-lg max-w-md">
+      <h1 class="text-3xl font-bold text-center mb-4">Love-O-Meter</h1>
+      <div class="mb-4">
+        <label for="yourName" class="block text-gray-700">Your Name:</label>
+        <input
+          type="text"
+          id="yourName"
+          class="w-full mt-1 p-2 border rounded-md"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="crushName" class="block text-gray-700"
+          >Your Crush's Name:</label
+        >
+        <input
+          type="text"
+          id="crushName"
+          class="w-full mt-1 p-2 border rounded-md"
+        />
+      </div>
+      <button
+        id="calculateBtn"
+        class="w-full bg-pink-500 text-white py-2 px-4 rounded-md hover:bg-pink-600 transition duration-300"
+      >
+        Calculate Compatibility
+      </button>
+      <div id="result" class="text-center mt-4"></div>
+      <div
+        id="emojiContainer"
+        class="flex justify-center items-center mt-4"
+      ></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

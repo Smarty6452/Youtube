@@ -1,0 +1,159 @@
+/* Add your CSS styles here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Add this to include padding and border in element's total width and height */
+  }
+  
+  .navbar {
+    background-color: transparent; /* Transparent background */
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Ensure navbar is above other content */
+  }
+  
+  .container {
+    display: flex;
+  justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+  }
+  .containers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative; /* Position for hover effect */
+  }
+  
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    bottom: -3px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-links li a:hover::after {
+    transform: scaleX(1); /* Underline effect on hover */
+  }
+  
+  /* Hero section styles */
+  .hero {
+    background-image: url("https://ik.imagekit.io/aq3ybtarw/icons/1330235%20(2).png?updatedAt=1709385113442");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 200px 0;
+    text-align: center;
+  }
+  
+  .main-txt {
+    font-size: 48px;
+  }
+  
+  .extraordinary-text {
+    font-size: 24px;
+    color: #f9ca24;
+    margin-top: 20px;
+    animation: textAnimation 3s infinite alternate; /* Example animation */
+  }
+  
+  .extra-content {
+    font-size: 18px;
+    margin-top: 30px;
+    padding: 0 20px; /* Add padding to paragraph text */
+    padding: 0 20px; /* Add padding to paragraph text */
+  }
+  
+  @keyframes textAnimation {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
+  .carousel {
+    position: relative;
+    border-radius: 20px;
+    width: 50%; 
+    height: 500px;
+    overflow: hidden;
+    margin: auto 0; 
+  }
+  
+  .carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .carousel img.active {
+    opacity: 1;
+  }
+  
+  .info {
+    width: 40%; /* Decrease info div width */
+  }
+  
+  .gs_reveal {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  
+  .gs_reveal.gs_active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  @media (max-width: 768px) {
+    
+    .container {
+        flex-direction: column;
+        gap: 50px;
+    
+       
+    }
+    .carousel  {
+        width: 100%;
+    }
+    .info {
+        width: 100%;
+    }
+}
